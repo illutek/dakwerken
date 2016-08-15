@@ -44,12 +44,104 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@font-face {
+  font-family: "Open Sans";
+  src: url(../fonts/OpenSans-Regular-webfont.woff); }
 body {
   margin: 0;
   background: #808080;
-  color: #000000; }
+  color: #000000;
+  font-family: "Open Sans"; }
+
+h1 {
+  font-size: 2.375em;
+  margin-top: 37px; }
+
+h2 {
+  font-size: 1.5em; }
+
+p {
+  font-size: 1em;
+  line-height: 28px; }
 
 header {
-  margin: 25px 0; }
+  margin: 25px 0 45px; }
+
+.aboutus-banner {
+  height: 155px;
+  background: url("../images/section-bcg.png") repeat-x; }
+
+.section-aboutus {
+  height: 380px;
+  background: #00ff00;
+  margin-top: -100px; }
+  .section-aboutus .aboutus__img {
+    margin-top: -30px; }
+  .section-aboutus h1 {
+    padding: 0 0 18px 90px;
+    background: url("../images/line-h1.png") no-repeat bottom left; }
+  .section-aboutus p {
+    padding-top: 20px; }
+
+.section-troeven {
+  color: #ffffff;
+  text-align: center;
+  padding: 75px 0; }
+  .section-troeven h2 {
+    background: url("../images/line-white.png") no-repeat bottom left;
+    padding-bottom: 18px; }
+  .section-troeven p {
+    padding-top: 15px; }
+
+.section-business {
+  margin-bottom: 80px; }
+  .section-business h2 {
+    padding: 25px 0 15px; }
+  .section-business p {
+    text-align: justify;
+    padding: 0 8px; }
+  .section-business .business__color-FF {
+    background: #00ff00;
+    height: 355px;
+    text-align: center; }
+  .section-business .business__color-CC {
+    background: #00cc00;
+    height: 355px;
+    text-align: center; }
+  .section-business .business__color-99 {
+    background: #009900;
+    height: 355px;
+    text-align: center; }
+
+.section-contact {
+  height: 380px;
+  background: #00ff00; }
+  .section-contact .contact-info {
+    padding-top: 75px; }
+  .section-contact h2 {
+    padding: 25px 0 18px 35px;
+    background: url("../images/line.png") no-repeat bottom left; }
+
+input {
+  margin: 25px 1% 10px 0;
+  background: #009900;
+  border: none;
+  padding: 8px; }
+
+input[type="text"] {
+  width: 45%; }
+
+input[type="email"] {
+  width: 45%; }
+
+input[type="submit"] {
+  width: 91%; }
+
+textarea {
+  width: 91%;
+  height: 120px;
+  background: #009900;
+  border: none;
+  padding: 8px; }
 
 /*# sourceMappingURL=style.css.map */

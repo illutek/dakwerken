@@ -4,7 +4,7 @@
 
 // Media Query's
 
-@mixin mQuery($arg...)
+=mQuery($arg...)
   @if length($arg) == 1
     @media screen and (max-width: nth($arg, 1))
     @content

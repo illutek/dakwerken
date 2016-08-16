@@ -6,6 +6,11 @@
   height: 355px
   text-align: center
 
+=businessHover()
+  &:hover
+    z-index: 999
+    transform: scale(1.1)
+
 .section-business
   margin-bottom: 80px
   h2
@@ -15,10 +20,17 @@
     padding: 0 8px
   .business__color-FF
     background: $green-main
+    transition: 0.7s
     +businessWrap
+    +businessHover
   .business__color-CC
     background: $green-dark-medium
+    transition: 0.7s
     +businessWrap
+    +businessHover
   .business__color-99
     background: $green-dark
+    transition: 0.7s
     +businessWrap
+    +businessHover
+

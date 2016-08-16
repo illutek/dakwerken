@@ -102,18 +102,31 @@ header {
     padding: 0 8px; }
   .section-business .business__color-FF {
     background: #00ff00;
+    transition: 0.7s;
     height: 355px;
     text-align: center; }
+    .section-business .business__color-FF:hover {
+      z-index: 999;
+      transform: scale(1.1); }
   .section-business .business__color-CC {
     background: #00cc00;
+    transition: 0.7s;
     height: 355px;
     text-align: center; }
+    .section-business .business__color-CC:hover {
+      z-index: 999;
+      transform: scale(1.1); }
   .section-business .business__color-99 {
     background: #009900;
+    transition: 0.7s;
     height: 355px;
     text-align: center; }
+    .section-business .business__color-99:hover {
+      z-index: 999;
+      transform: scale(1.1); }
 
 .section-contact {
+  margin-top: -430px;
   height: 380px;
   background: #00ff00; }
   .section-contact .contact-info {
@@ -122,11 +135,26 @@ header {
     padding: 25px 0 18px 35px;
     background: url("../images/line.png") no-repeat bottom left; }
 
+.contact-banner {
+  height: 155px;
+  background: url("../images/section-bcg.png") repeat-x;
+  margin-top: 360px; }
+
 input {
   margin: 25px 1% 10px 0;
   background: #009900;
   border: none;
   padding: 8px; }
+  input:hover {
+    background: #00a300; }
+  input::-webkit-input-placeholder {
+    color: #fff; }
+  input:-moz-placeholder {
+    color: #fff; }
+  input::-moz-placeholder {
+    color: #fff; }
+  input:-ms-input-placeholder {
+    color: #fff; }
 
 input[type="text"] {
   width: 45%; }
@@ -135,7 +163,9 @@ input[type="email"] {
   width: 45%; }
 
 input[type="submit"] {
-  width: 91%; }
+  width: 91%;
+  padding: 15px 0;
+  color: #ffffff; }
 
 textarea {
   width: 91%;
@@ -143,5 +173,40 @@ textarea {
   background: #009900;
   border: none;
   padding: 8px; }
+  textarea:hover {
+    background: #00a300; }
+  textarea::-webkit-input-placeholder {
+    color: #fff; }
+  textarea:-moz-placeholder {
+    color: #fff; }
+  textarea::-moz-placeholder {
+    color: #fff; }
+  textarea:-ms-input-placeholder {
+    color: #fff; }
+
+.section-foto {
+  margin-top: -105px; }
+  .section-foto li {
+    float: left;
+    margin-right: 3%;
+    magin-bottom: 3%;
+    width: 48.5%; }
+    .section-foto li:nth-child(2n) {
+      margin-right: 0; }
+  .section-foto img {
+    width: 100%; }
+
+.foto-banner {
+  height: 155px;
+  background: url("../images/section-bcg.png") repeat-x;
+  margin-top: 80px; }
+
+footer {
+  background: #00ff00;
+  height: 50px;
+  margin-top: 55px; }
+  footer p {
+    font-size: 12px;
+    padding-top: 10px; }
 
 /*# sourceMappingURL=style.css.map */

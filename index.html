@@ -23,7 +23,7 @@
 </div>
 
 <div class="aboutus-banner"></div>
-<section class="container section-aboutus">
+<section class="container section-aboutus wow fadeIn" data-wow-duration="3s">
     <div class="row">
         <div class="col-md-5 aboutus__img">
             <img src="images/aboutus-img.jpg">
@@ -53,15 +53,16 @@
     <p>Meewerkende patron - 15 jaar ervaring - Kwalitatief en duurzaam - Correcte prijs</p>
 </section>
 
-<section class="container section-business">
+<section class="container section-business wow fadeIn" data-wow-duration="3s">
     <div class="row">
         <div class="col-md-4 business__color-FF">
-            <h2>HELLENDE DAKEN</h2>
 
-            <p>Wij doen de daktimmer van uw dak. Als ook dakkapellen en plaatsing van Veluxen. Wij werken met alle
-                soorten pannen, ook met natuurleien en kunststofleien. Ecopanelen en sandwichpanelen van het merk
-                Joriside. Voor een dakrenovatie en herstellingen kan u ook steeds beroep op ons doen.
-                Bij Dakwerken Daniels vindt u ongetwijfeld de pan of lei die past bij de stijl van uw woning.</p>
+                <h2>HELLENDE DAKEN</h2>
+                <p>Wij doen de daktimmer van uw dak. Als ook dakkapellen en plaatsing van Veluxen. Wij werken met alle
+                    soorten pannen, ook met natuurleien en kunststofleien. Ecopanelen en sandwichpanelen van het merk
+                    Joriside. Voor een dakrenovatie en herstellingen kan u ook steeds beroep op ons doen.
+                    Bij Dakwerken Daniels vindt u ongetwijfeld de pan of lei die past bij de stijl van uw woning.</p>
+
         </div>
         <div class="col-md-4 business__color-CC">
             <h2>PLATTE DAKEN</h2>
@@ -83,7 +84,7 @@
     </div>
 </section>
 
-<section class="container section-business">
+<section class="container section-business wow fadeIn" data-wow-duration="3s">
     <div class="row">
         <div class="col-md-4 business__color-99">
             <h2>DAKISOLATIE</h2>
@@ -107,16 +108,17 @@
     </div>
 </section>
 
-<section class="container section-contact">
+<div class="contact-banner"></div>
+<section class="container section-contact wow fadeIn" data-wow-duration="3s">
     <h2>Ons contacteren - Vraag een gratis prijsofferte aan</h2>
 
     <div class="row">
         <div class="col-md-7">
-            <form>
-                <input type="text" name="naam" placeholder="Jouw naam">
-                <input type="email" name="email" placeholder="Jouw e-mail">
-                <textarea placeholder="Bericht"></textarea>
-                <input type="submit" name="send" value="Verzenden">
+            <form action="verzonden.html">
+                <input type="text" required="required" name="naam" placeholder="Jouw naam">
+                <input type="email" required="required" name="email" placeholder="Jouw e-mail">
+                <textarea required="required" placeholder="Bericht"></textarea>
+                <input type="submit" name="send" action="mailto:stefanvandenborne@gmail.com" value="Verzenden">
             </form>
         </div>
         <div class="col-md-5 contact-info">
@@ -134,6 +136,19 @@
         </div>
     </div>
 </section>
+
+<div class="foto-banner"></div>
+<section class="container section-foto wow fadeIn" data-wow-duration="3s">
+    <ul>
+        <li><img src="images/fotos/001-voor.jpg"></li>
+        <li><img src="images/fotos/001-na.jpg"></li>
+    </ul>
+</section>
+<footer class="section-footer">
+    <div class="container">
+        <p>&copy; Dakwerken Daniels | 2016</p>
+    </div>
+</footer>
 
 </body>
 </html>

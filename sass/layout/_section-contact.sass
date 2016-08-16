@@ -3,6 +3,7 @@
 // ==========================================
 
 .section-contact
+  margin-top: -430px
   height: 380px
   background: $green-main
   .contact-info
@@ -11,16 +12,28 @@
     padding: 25px 0 18px 35px
     background: url("../images/line.png") no-repeat bottom left
 
-//form
+.contact-banner
+  +banner
+  margin-top: 360px
+
+
+//form styling
 
 =field()
   background: $green-dark
   border: none
   padding: 8px
 
+=hoverLighten()
+  &:hover
+    background: lighten($green-dark, 2)
+
 input
   margin: 25px 1% 10px 0
   +field
+  +hoverLighten
+  +input-placeholder(#fff)
+
 
 input[type="text"]
   width: 45%
@@ -28,10 +41,18 @@ input[type="text"]
 input[type="email"]
   width: 45%
 
+
 input[type="submit"]
   width: 91%
+  padding: 15px 0
+  color: #ffffff
+
+
 
 textarea
   width: 91%
   height: 120px
   +field
+  +hoverLighten
+  +input-placeholder(#fff)
+

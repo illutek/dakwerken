@@ -12,6 +12,27 @@
   @if length($arg) == 2
     @media screen and (max-width: nth($arg, 1)) and (min-width: nth($arg, 2))
     @content
-    
+
+=banner()
+  height: 155px
+  background: url("../images/section-bcg.png") repeat-x
+
+=grid($cols, $mgn)
+  float: left
+  margin-right: $mgn
+  magin-bottom: $mgn
+  width: ((100% - (($cols - 1) * $mgn)) / $cols)
+  &:nth-child(#{$cols}n)
+    margin-right: 0
+
+=input-placeholder($color)
+  &::-webkit-input-placeholder
+    color: $color
+  &:-moz-placeholder
+    color: $color
+  &::-moz-placeholder //for newer versions of Firefox
+    color: $color
+  &:-ms-input-placeholder
+    color: $color
   
 

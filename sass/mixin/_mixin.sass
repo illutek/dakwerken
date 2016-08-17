@@ -7,16 +7,21 @@
 =mQuery($arg...)
   @if length($arg) == 1
     @media screen and (max-width: nth($arg, 1))
-    @content
+      @content
 
   @if length($arg) == 2
     @media screen and (max-width: nth($arg, 1)) and (min-width: nth($arg, 2))
-    @content
+      @content
 
+
+// de groene balk die een aantal keren voorkomt
 =banner()
   height: 155px
-  background: url("../images/section-bcg.png") repeat-x
+  background: url("../images/section-gray-bcg.png") repeat-x
 
+// voor de voor en na foto's langs elkaar te plaatsen, dit zorgt voor geen
+// marge aan de rechterkant
+// use +grid(2,3%) bv
 =grid($cols, $mgn)
   float: left
   margin-right: $mgn
@@ -25,6 +30,7 @@
   &:nth-child(#{$cols}n)
     margin-right: 0
 
+// Placeholder text in inputfields
 =input-placeholder($color)
   &::-webkit-input-placeholder
     color: $color

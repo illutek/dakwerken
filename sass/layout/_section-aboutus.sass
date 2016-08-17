@@ -6,13 +6,22 @@
   +banner
 
 .section-aboutus
-  height: 380px
+  //height: 380px
   background: $green-main
   margin-top: -100px
+  margin-bottom: 75px
   .aboutus__img
     margin-top: -30px
+    img
+      width: 100%
   h1
     padding: 0 0 18px 90px
     background: url("../images/line-h1.png") no-repeat bottom left
   p
-    padding-top: 20px
+    padding: 20px 0
+
++mQuery(479px)
+  .section-aboutus
+    h1
+      font-size: 1.8em
+      padding: 0 0 18px 30px

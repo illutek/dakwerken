@@ -5,9 +5,14 @@
 @font-face
   font-family: "Open Sans"
   src: url(../fonts/OpenSans-Regular-webfont.woff)
+
+@font-face
+  font-family: FontAwesome
+  scr: url(../fonts/fontawesome-webfont.woff)
+
 body
   margin: 0
-  background: $grey-dark
+  background: $gray-dark
   color: #000000
   font-family: "Open Sans"
 
@@ -21,3 +26,19 @@ h2
 p
   font-size: 1em
   line-height: 28px
+
+a
+  color: #000000
+  &:before
+    font-family: FontAwesome
+    content: "\f08e"
+    display: inline-block
+    padding-right: 3px
+  &:hover
+    color: #000000
+    text-decoration: none
+    &:before
+      font-family: FontAwesome
+      content: "\f14c"
+      display: inline-block
+      padding-right: 5px

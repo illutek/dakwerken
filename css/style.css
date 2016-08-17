@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
  * v2.0 | 20110126
  * License: none (public domain) */
@@ -47,6 +48,9 @@ table {
 @font-face {
   font-family: "Open Sans";
   src: url(../fonts/OpenSans-Regular-webfont.woff); }
+@font-face {
+  font-family: FontAwesome;
+  scr: url(../fonts/fontawesome-webfont.woff); }
 body {
   margin: 0;
   background: #808080;
@@ -64,70 +68,111 @@ p {
   font-size: 1em;
   line-height: 28px; }
 
+a {
+  color: #000000; }
+  a:before {
+    font-family: FontAwesome;
+    content: "";
+    display: inline-block;
+    padding-right: 3px; }
+  a:hover {
+    color: #000000;
+    text-decoration: none; }
+    a:hover:before {
+      font-family: FontAwesome;
+      content: "";
+      display: inline-block;
+      padding-right: 5px; }
+
 header {
   margin: 25px 0 45px; }
-
-.aboutus-banner {
-  height: 155px;
-  background: url("../images/section-bcg.png") repeat-x; }
-
-.section-aboutus {
-  height: 380px;
-  background: #00ff00;
-  margin-top: -100px; }
-  .section-aboutus .aboutus__img {
-    margin-top: -30px; }
-  .section-aboutus h1 {
-    padding: 0 0 18px 90px;
-    background: url("../images/line-h1.png") no-repeat bottom left; }
-  .section-aboutus p {
-    padding-top: 20px; }
+  header img {
+    width: 100%; }
 
 .section-troeven {
   color: #ffffff;
   text-align: center;
-  padding: 75px 0; }
+  padding: 75px 0;
+  transition: 0.7s; }
+  .section-troeven:hover {
+    color: #00ff00; }
   .section-troeven h2 {
     background: url("../images/line-white.png") no-repeat bottom left;
-    padding-bottom: 18px; }
+    padding-bottom: 18px;
+    font-size: 2em; }
   .section-troeven p {
-    padding-top: 15px; }
+    padding-top: 15px;
+    font-size: 1.5em; }
 
+@media screen and (max-width: 479px) {
+  .section-troeven {
+    padding: 15px 5px; }
+    .section-troeven p {
+      font-size: 1em; } }
+.aboutus-banner {
+  height: 155px;
+  background: url("../images/section-gray-bcg.png") repeat-x; }
+
+.section-aboutus {
+  background: #00ff00;
+  margin-top: -100px;
+  margin-bottom: 75px; }
+  .section-aboutus .aboutus__img {
+    margin-top: -30px; }
+    .section-aboutus .aboutus__img img {
+      width: 100%; }
+  .section-aboutus h1 {
+    padding: 0 0 18px 90px;
+    background: url("../images/line-h1.png") no-repeat bottom left; }
+  .section-aboutus p {
+    padding: 20px 0; }
+
+@media screen and (max-width: 479px) {
+  .section-aboutus h1 {
+    font-size: 1.8em;
+    padding: 0 0 18px 30px; } }
 .section-business {
-  margin-bottom: 80px; }
+  margin-bottom: 80px;
+  color: #ffffff; }
   .section-business h2 {
     padding: 25px 0 15px; }
   .section-business p {
     text-align: justify;
     padding: 0 8px; }
-  .section-business .business__color-FF {
-    background: #00ff00;
+  .section-business .business__color-darker {
+    background: #4D4D4D;
     transition: 0.7s;
-    height: 355px;
+    min-height: 355px;
+    padding-bottom: 15px;
     text-align: center; }
-    .section-business .business__color-FF:hover {
+    .section-business .business__color-darker:hover {
       z-index: 999;
       transform: scale(1.1); }
-  .section-business .business__color-CC {
-    background: #00cc00;
+  .section-business .business__color-main {
+    background: #666666;
     transition: 0.7s;
-    height: 355px;
+    min-height: 355px;
+    padding-bottom: 15px;
     text-align: center; }
-    .section-business .business__color-CC:hover {
+    .section-business .business__color-main:hover {
       z-index: 999;
       transform: scale(1.1); }
-  .section-business .business__color-99 {
-    background: #009900;
+  .section-business .business__color-light {
+    background: #999999;
     transition: 0.7s;
-    height: 355px;
+    min-height: 355px;
+    padding-bottom: 15px;
     text-align: center; }
-    .section-business .business__color-99:hover {
+    .section-business .business__color-light:hover {
       z-index: 999;
       transform: scale(1.1); }
 
+@media screen and (max-width: 479px) {
+  .section-business .business__color-darker, .section-business .business__color-main, .section-business .business__color-light {
+    min-height: 100px; } }
 .section-contact {
   margin-top: -430px;
-  height: 380px;
+  padding-bottom: 25px;
   background: #00ff00; }
   .section-contact .contact-info {
     padding-top: 75px; }
@@ -137,11 +182,13 @@ header {
 
 .contact-banner {
   height: 155px;
-  background: url("../images/section-bcg.png") repeat-x;
+  background: url("../images/section-gray-bcg.png") repeat-x;
   margin-top: 360px; }
 
 input {
-  margin: 25px 1% 10px 0;
+  margin: 25px 0 10px 0;
+  transition: 0.7s;
+  width: 45%;
   background: #009900;
   border: none;
   padding: 8px; }
@@ -156,20 +203,10 @@ input {
   input:-ms-input-placeholder {
     color: #fff; }
 
-input[type="text"] {
-  width: 45%; }
-
-input[type="email"] {
-  width: 45%; }
-
-input[type="submit"] {
-  width: 91%;
-  padding: 15px 0;
-  color: #ffffff; }
-
 textarea {
   width: 91%;
   height: 120px;
+  transition: 0.7s;
   background: #009900;
   border: none;
   padding: 8px; }
@@ -184,23 +221,63 @@ textarea {
   textarea:-ms-input-placeholder {
     color: #fff; }
 
+input[type="submit"] {
+  width: 91%;
+  padding: 15px 0;
+  color: #ffffff; }
+
+@media screen and (max-width: 479px) {
+  .section-contact h2 {
+    font-size: 1.1em; }
+  .section-contact .contact-info {
+    padding-top: 15px; }
+
+  input {
+    margin: 10px 0 5px 0;
+    width: 100%; }
+
+  textarea {
+    width: 100%;
+    margin-top: 10px; }
+
+  input[type="submit"] {
+    width: 100%; } }
 .section-foto {
   margin-top: -105px; }
   .section-foto li {
+    margin-bottom: 10px;
     float: left;
-    margin-right: 3%;
-    magin-bottom: 3%;
-    width: 48.5%; }
-    .section-foto li:nth-child(2n) {
+    margin-right: 2%;
+    magin-bottom: 2%;
+    width: 32%; }
+    .section-foto li:nth-child(3n) {
       margin-right: 0; }
   .section-foto img {
-    width: 100%; }
+    width: 100%;
+    transition: 0.7s; }
+    .section-foto img:hover {
+      z-index: 999;
+      transition-delay: 0.2s;
+      transform: scale(1.5); }
 
 .foto-banner {
   height: 155px;
-  background: url("../images/section-bcg.png") repeat-x;
+  background: url("../images/section-gray-bcg.png") repeat-x;
   margin-top: 80px; }
 
+@media screen and (max-width: 479px) {
+  .section-foto li {
+    float: left;
+    margin-right: 0%;
+    magin-bottom: 0%;
+    width: 100%; }
+    .section-foto li:nth-child(1n) {
+      margin-right: 0; }
+  .section-foto img:hover {
+    transform: scale(1.1); }
+
+  .foto-banner {
+    margin-top: 25px; } }
 footer {
   background: #00ff00;
   height: 50px;

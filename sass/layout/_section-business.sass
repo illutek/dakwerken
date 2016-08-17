@@ -3,7 +3,8 @@
 // ==========================================
 
 =businessWrap()
-  height: 355px
+  min-height: 355px
+  padding-bottom: 15px
   text-align: center
 
 =businessHover()
@@ -13,24 +14,29 @@
 
 .section-business
   margin-bottom: 80px
+  color: #ffffff
   h2
     padding: 25px 0 15px
   p
     text-align: justify
     padding: 0 8px
-  .business__color-FF
-    background: $green-main
+  .business__color-darker
+    background: $gray-darker
     transition: 0.7s
     +businessWrap
     +businessHover
-  .business__color-CC
-    background: $green-dark-medium
+  .business__color-main
+    background: $gray-main
     transition: 0.7s
     +businessWrap
     +businessHover
-  .business__color-99
-    background: $green-dark
+  .business__color-light
+    background: $gray-light
     transition: 0.7s
     +businessWrap
     +businessHover
 
++mQuery(479px)
+  .section-business
+    .business__color-darker, .business__color-main, .business__color-light
+      min-height: 100px

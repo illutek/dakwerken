@@ -5,10 +5,10 @@
 .section-foto
   margin-top: -105px
   li
-    margin-bottom: 10px
     +grid(3,2%)
   img
     width: 100%
+    height: auto
     transition: 0.7s
     &:hover
       z-index: 999
@@ -22,7 +22,7 @@
 +mQuery(479px)
   .section-foto
     li
-      +grid(1, 0%)
+      +grid(1, 3%)
     img
       &:hover
         transform: scale(1.1)

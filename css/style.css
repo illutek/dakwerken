@@ -1,7 +1,6 @@
-@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
- * v2.0 | 20110126
- * License: none (public domain) */
+   v2.0 | 20110126
+   License: none (public domain) */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -38,7 +37,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: "";
+  content: '';
   content: none; }
 
 table {
@@ -48,9 +47,11 @@ table {
 @font-face {
   font-family: "Open Sans";
   src: url(../fonts/OpenSans-Regular-webfont.woff); }
+
 @font-face {
   font-family: FontAwesome;
   scr: url(../fonts/fontawesome-webfont.woff); }
+
 body {
   margin: 0;
   background: #808080;
@@ -72,7 +73,7 @@ a {
   color: #000000; }
   a:before {
     font-family: FontAwesome;
-    content: "";
+    content: "\f08e";
     display: inline-block;
     padding-right: 3px; }
   a:hover {
@@ -80,7 +81,7 @@ a {
     text-decoration: none; }
     a:hover:before {
       font-family: FontAwesome;
-      content: "";
+      content: "\f14c";
       display: inline-block;
       padding-right: 5px; }
 
@@ -107,8 +108,11 @@ header {
 @media screen and (max-width: 479px) {
   .section-troeven {
     padding: 15px 5px; }
+    .section-troeven h2 {
+      font-size: 1.8em; }
     .section-troeven p {
       font-size: 1em; } }
+
 .aboutus-banner {
   height: 155px;
   background: url("../images/section-gray-bcg.png") repeat-x; }
@@ -131,6 +135,7 @@ header {
   .section-aboutus h1 {
     font-size: 1.8em;
     padding: 0 0 18px 30px; } }
+
 .section-business {
   margin-bottom: 80px;
   color: #ffffff; }
@@ -170,6 +175,7 @@ header {
 @media screen and (max-width: 479px) {
   .section-business .business__color-darker, .section-business .business__color-main, .section-business .business__color-light {
     min-height: 100px; } }
+
 .section-contact {
   margin-top: -430px;
   padding-bottom: 25px;
@@ -179,11 +185,33 @@ header {
   .section-contact h2 {
     padding: 25px 0 18px 35px;
     background: url("../images/line.png") no-repeat bottom left; }
+  .section-contact .mobile-phone {
+    display: none; }
+  .section-contact .phone {
+    display: block;
+    padding: 10px 0; }
 
 .contact-banner {
   height: 155px;
   background: url("../images/section-gray-bcg.png") repeat-x;
   margin-top: 360px; }
+
+@media screen and (max-width: 479px) {
+  .section-contact .phone {
+    display: none; }
+  .section-contact .mobile-phone {
+    padding: 10px 0;
+    display: block; }
+    .section-contact .mobile-phone .btn-secondary {
+      background: #009900;
+      padding: 20px;
+      width: 100%;
+      font-size: 16px;
+      border-radius: 0px; }
+      .section-contact .mobile-phone .btn-secondary a {
+        color: #ffffff; }
+  .section-contact .email {
+    margin-top: 15px; } }
 
 input {
   margin: 25px 0 10px 0;
@@ -231,17 +259,15 @@ input[type="submit"] {
     font-size: 1.1em; }
   .section-contact .contact-info {
     padding-top: 15px; }
-
   input {
     margin: 10px 0 5px 0;
     width: 100%; }
-
   textarea {
     width: 100%;
     margin-top: 10px; }
-
   input[type="submit"] {
     width: 100%; } }
+
 .section-foto {
   margin-top: -105px; }
   .section-foto li {
@@ -275,9 +301,9 @@ input[type="submit"] {
       margin-right: 0; }
   .section-foto img:hover {
     transform: scale(1.1); }
-
   .foto-banner {
     margin-top: 25px; } }
+
 footer {
   background: #00ff00;
   height: 50px;
@@ -285,5 +311,3 @@ footer {
   footer p {
     font-size: 12px;
     padding-top: 10px; }
-
-/*# sourceMappingURL=style.css.map */

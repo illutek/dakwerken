@@ -1,2 +1,11 @@
-vendor
+
 .idea/
+
+# Build Systems #
+########################
+node_modules
+vendor
+bower_components
+*.css.map
+build/
+dist/

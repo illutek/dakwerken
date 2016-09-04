@@ -311,3 +311,6 @@ footer {
   footer p {
     font-size: 12px;
     padding-top: 10px; }
+
+.successfully-sent {
+  padding-bottom: 25px; }

@@ -3,12 +3,14 @@ var cleanCSS = require('gulp-clean-css');
 //var jsmin = require('gulp-jsmin');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
+var plumber = require('gulp-plumber');
 //var imagemin = require('gulp-imagemin');
 //var cache = require('gulp-cache');
 
 // Sass to css
 gulp.task('sass', function () {
     return gulp.src('./sass/**/*.sass')
+        .pipe(plumber())
         .pipe(sass())
         .pipe(gulp.dest('./css'));
 });

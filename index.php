@@ -4,8 +4,9 @@
  * User: Stefan
  * Date: 28/08/2016
  * Time: 21:48
- */ ?>
-<?PHP
+ */
+
+
 // form handler
 if (isset($_POST['sendfeedback'])) {
   $name = $_POST['naam'];
@@ -14,12 +15,15 @@ if (isset($_POST['sendfeedback'])) {
   $messageContent = "Naam afzender: $name \nBericht: \n$message";
 
   // send email and redirect
-  $to = "swen.daniels@skynet.be, stefanvandenborne@outlook.com";
+  $to = "stefanvandenborne@outlook.com";
   $subject = "Contact van de website";
   $headers = "From:" . $email . "\r\n";
   mail($to, $subject, $messageContent, $headers);
-  header("Location: http://www.illutek.eu/dak/verzonden.php");
+  header("Location: http://www.illutek.eu/dak/index.php?sendFeedback=true");
   exit;
+  /**
+   * TODO een reCaptcha toevoegen aan het formulier
+   */
 }
 ?>
 <!DOCTYPE html>
@@ -43,6 +47,18 @@ if (isset($_POST['sendfeedback'])) {
 <body>
 
 <?php include 'includes/section-header.inc.php'; ?>
+
+<?php
+/**
+ * Melding als form verzonden is
+ */
+if (isset($_GET['sendFeedback'])) { ?>
+  <section class="container wow fadeIn" data-wow-duration="3s">
+    <div class="col-md-12 successfully-sent">
+      <p>Je aanvraag is verzonden we nemen zo snel mogelijk contact met u op.</p>
+    </div>
+  </section>
+<?php } ?>
 
 <div class="aboutus-banner"></div>
 

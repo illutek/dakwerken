@@ -89,6 +89,10 @@ header {
   margin: 25px 0 45px; }
   header img {
     width: 100%; }
+  header a:before {
+    content: ""; }
+  header a:hover:before {
+    content: ""; }
 
 .section-troeven {
   color: #ffffff;
@@ -313,4 +317,7 @@ footer {
     padding-top: 10px; }
 
 .successfully-sent {
-  padding-bottom: 25px; }
+  background: #00ff00;
+  padding: 25px;
+  margin-bottom: 15px;
+  font-size: 1.5em; }

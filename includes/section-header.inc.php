@@ -4,11 +4,13 @@
  * User: Stefan
  * Date: 4/09/2016
  * Time: 21:35
- */?>
+ */ ?>
 
 <div class="container">
   <header>
-    <img class="logo" src="images/header-img-logo.png">
+    <a href="index.php">
+      <img class="logo" src="images/header-img-logo.png">
+    </a>
   </header>
 </div>
 

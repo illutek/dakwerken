@@ -6,7 +6,6 @@
  * Time: 21:48
  */
 
-
 // form handler
 if (isset($_POST['sendfeedback'])) {
   $name = $_POST['naam'];
@@ -14,16 +13,25 @@ if (isset($_POST['sendfeedback'])) {
   $message = $_POST['bericht'];
   $messageContent = "Naam afzender: $name \nBericht: \n$message";
 
-  // send email and redirect
-  $to = "stefanvandenborne@outlook.com";
-  $subject = "Contact van de website";
-  $headers = "From:" . $email . "\r\n";
-  mail($to, $subject, $messageContent, $headers);
-  header("Location: http://www.illutek.eu/dak/index.php?sendFeedback=true");
-  exit;
-  /**
-   * TODO een reCaptcha toevoegen aan het formulier
-   */
+  $url = 'https://www.google.com/recaptcha/api/siteverify';
+  $privatekey = "6Lc8mAETAAAAAIgupbLt40rKHl506Fip8JIp-Hds";
+
+  $response = file_get_contents($url."?secret=".$privatekey."&response=".$_POST['g-recaptcha-response']."&remoteip".$_SERVER['REMOTE_ADDR']);
+
+  $data = json_decode($response);
+
+  if (isset($data->success) AND $data->success == true) {
+    // send email and redirect
+    $to = "swen.daniels@skynet.be, stefanvandenborne@gmail.com";
+    $subject = "Contact van de website";
+    $headers = "From:" . $email . "\r\n";
+    mail($to, $subject, $messageContent, $headers);
+    header("Location: http://www.illutek.eu/dak/index.php?sendFeedback=true");
+  } else {
+
+    header("Location: http://www.illutek.eu/dak/index.php?CaptchaFail=true");
+
+  }
 }
 ?>
 <!DOCTYPE html>
@@ -39,6 +47,7 @@ if (isset($_POST['sendfeedback'])) {
   <script src="vendor/jquery/dist/jquery.js"></script>
   <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
   <script src="vendor/jquery.stellar/jquery.stellar.js"></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
   <script src="vendor/wow/dist/wow.js"></script>
   <script>new WOW().init(); </script>
 
@@ -56,6 +65,14 @@ if (isset($_GET['sendFeedback'])) { ?>
   <section class="container wow fadeIn" data-wow-duration="3s">
     <div class="col-md-12 successfully-sent">
       <p>Je aanvraag is verzonden we nemen zo snel mogelijk contact met u op.</p>
+    </div>
+  </section>
+<?php }
+
+if (isset($_GET['CaptchaFail'])) { ?>
+  <section class="container wow fadeIn" data-wow-duration="3s">
+    <div class="col-md-12 successfully-sent">
+      <p>Captcha fout. Probeer eens opnieuw.</p>
     </div>
   </section>
 <?php } ?>

@@ -235,6 +235,9 @@ input {
   input:-ms-input-placeholder {
     color: #fff; }
 
+.g-recaptcha {
+  margin-top: 15px; }
+
 textarea {
   width: 91%;
   height: 120px;

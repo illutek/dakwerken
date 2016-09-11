@@ -14,7 +14,7 @@ if (isset($_POST['sendfeedback'])) {
   $messageContent = "Naam afzender: $name \nBericht: \n$message";
 
   $url = 'https://www.google.com/recaptcha/api/siteverify';
-  $privatekey = "6Lc8mAETAAAAAIgupbLt40rKHl506Fip8JIp-Hds";
+  $privatekey = "6Ld5YikTAAAAACHKT9HXbG8OvcLE4eaEKm4LWqhD";
 
   $response = file_get_contents($url."?secret=".$privatekey."&response=".$_POST['g-recaptcha-response']."&remoteip".$_SERVER['REMOTE_ADDR']);
 
@@ -26,10 +26,10 @@ if (isset($_POST['sendfeedback'])) {
     $subject = "Contact van de website";
     $headers = "From:" . $email . "\r\n";
     mail($to, $subject, $messageContent, $headers);
-    header("Location: http://www.illutek.eu/dak/index.php?sendFeedback=true");
+    header("Location: http://www.dakwerken-daniels.be/index.php?sendFeedback=true");
   } else {
 
-    header("Location: http://www.illutek.eu/dak/index.php?CaptchaFail=true");
+    header("Location: http://www.dakwerken-daniels.be/index.php?CaptchaFail=true");
 
   }
 }
@@ -39,21 +39,23 @@ if (isset($_POST['sendfeedback'])) {
 <head lang="en">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
+  <meta name="description" content="Dakwerken Daniels is jouw dakwerker voor hellende daken, platte daken, lood-, zink- en
+  koperwerken, dakisolatie, gevelbekleding maar ook carports en pergola's dit voor de regio Antwerpen en Limburg">
   <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="vendor/animate.css/animate.css">
+  <link rel="stylesheet" href="vendor/animate.css/animate.min.css">
   <link rel="stylesheet" href="css/style.min.css">
-  <script src="vendor/jquery/dist/jquery.js"></script>
-  <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="vendor/jquery.stellar/jquery.stellar.js"></script>
+  <script src="vendor/jquery/dist/jquery.min.js"></script>
+  <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="vendor/jquery.stellar/jquery.stellar.min.js"></script>
   <script src='https://www.google.com/recaptcha/api.js'></script>
-  <script src="vendor/wow/dist/wow.js"></script>
+  <script src="vendor/wow/dist/wow.min.js"></script>
   <script>new WOW().init(); </script>
 
   <title>Dakwerken Daniels</title>
 </head>
 <body>
+<?php include_once("includes/analyticstracking.php") ?>
 
 <?php include 'includes/section-header.inc.php'; ?>
 

@@ -9,7 +9,7 @@
 <div class="container">
   <header>
     <a href="index.php">
-      <img class="logo" src="images/header-img-logo.png">
+      <img class="logo" src="images-min/header-img-logo.png">
     </a>
   </header>
 </div>

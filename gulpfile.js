@@ -4,7 +4,7 @@ var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
-//var imagemin = require('gulp-imagemin');
+var imagemin = require('gulp-imagemin');
 //var cache = require('gulp-cache');
 
 // Sass to css
@@ -33,11 +33,11 @@ gulp.task('minify-css', function() {
 // Task Image minify TODO werkt nog niet verder uitzoeken
 // //////////////////////////////////////////////////////////
 
-//gulp.task('images', function(){
-//    return gulp.src('pre-images/**/*')
-//        .pipe(imagemin({ progressive: true}))
-//        .pipe(gulp.dest('images'));
-//});
+gulp.task('compress-images', function(){
+   return gulp.src('images/**/*')
+        .pipe(imagemin({ progressive: true}))
+        .pipe(gulp.dest('images-min'));
+});
 
 // ///////////////////////////////////////////////////
 // Watch Task

@@ -9,7 +9,7 @@
 <section class="container section-aboutus wow fadeIn" data-wow-duration="3s">
   <div class="row">
     <div class="col-md-5 aboutus__img">
-      <img src="images/fotos/poolhouse-01.jpg">
+      <img src="images-min/fotos/poolhouse-01.jpg">
     </div>
     <div class="col-md-7">
       <h1>Dakwerken Daniels</h1>

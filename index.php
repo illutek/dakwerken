@@ -14,7 +14,7 @@ if (isset($_POST['sendfeedback'])) {
   $messageContent = "Naam afzender: $name \nBericht: \n$message";
 
   $url = 'https://www.google.com/recaptcha/api/siteverify';
-  $privatekey = "6Ld5YikTAAAAACHKT9HXbG8OvcLE4eaEKm4LWqhD";
+  $privatekey = "-- key Server side integration --";
 
   $response = file_get_contents($url."?secret=".$privatekey."&response=".$_POST['g-recaptcha-response']."&remoteip".$_SERVER['REMOTE_ADDR']);
 

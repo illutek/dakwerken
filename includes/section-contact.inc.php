@@ -23,7 +23,7 @@
                value="<?PHP if (isset($_POST['email'])) echo htmlspecialchars($_POST['email']); ?>">
         <textarea required="required" name="bericht"
                   placeholder="Bericht"><?PHP if (isset($_POST['message'])) echo htmlspecialchars($_POST['message']); ?></textarea>
-        <div class="g-recaptcha" data-sitekey="6Ld5YikTAAAAAHpuOXo2WZspqxDoBRN5ZWv-iACg"></div>
+        <div class="g-recaptcha" data-sitekey="-- key Client-side integration --"></div>
         <input type="submit" name="sendfeedback" value="Verzenden">
       </form>
 

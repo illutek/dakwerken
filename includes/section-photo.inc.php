@@ -12,5 +12,6 @@
     <li><img src="images-min/fotos/dakkapel_001-min.jpg"></li>
     <li><img src="images-min/fotos/dakkapel_002-min.jpg"></li>
     <li><img src="images-min/fotos/zijgevel_001-min.jpg"></li>
+    <li><img src="images-min/fotos/hellend_dak-001.jpg"></li>
   </ul>
 </section>

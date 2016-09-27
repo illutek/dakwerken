@@ -5,20 +5,23 @@
   "main": "gulpfile.js",
   "dependencies": {
     "del": "~2.2.2",
-    "grunt": "~1.0.1",
     "gulp": "~3.9.1",
     "gulp-clean-css": "~2.0.12",
     "gulp-jsmin": "~0.1.5",
     "gulp-rename": "~1.2.2",
     "gulp-sass": "~2.3.2",
+    "gulp-concat": "2.5.2",
     "gulp-uglify": "~2.0.0"
   },
   "devDependencies": {
-    "gulp-jsmin": "~0.1.5",
     "del": "~2.2.2",
-    "gulp-imagemin": "~3.0.3",
     "gulp-cache": "~0.4.5",
-    "gulp-plumber": "~1.1.0"
+    "gulp-imagemin": "~3.0.3",
+    "gulp-jsmin": "~0.1.5",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "~1.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "notify-send": "^0.1.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

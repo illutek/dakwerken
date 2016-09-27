@@ -5,19 +5,31 @@ var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
 var imagemin = require('gulp-imagemin');
+var concat = require('gulp-concat');
+var sourcemaps = require('gulp-sourcemaps');
+//var notify = require('gulp-notify');
 //var cache = require('gulp-cache');
+
+// ------------------------------------------------------
+
+var src_sass = "./sass/**/*.sass";
+var src_scss = "./sass/**/*.scss"; // dit voor scss
+
+var dest_css = "./css";
 
 // Sass to css
 gulp.task('sass', function () {
-    return gulp.src('./sass/**/*.sass')
+    return gulp.src(src_sass)
         .pipe(plumber())
         .pipe(sass())
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest(dest_css));
 });
 
 gulp.task('minify-css', function() {
     return gulp.src(['css/*.css', '!css/*.min.css'])
         .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(sourcemaps.init())
+        .pipe(sourcemaps.write())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('css'));
 });
@@ -30,7 +42,7 @@ gulp.task('minify-css', function() {
 // });
 
 // //////////////////////////////////////////////////////////
-// Task Image minify TODO werkt nog niet verder uitzoeken
+// Task Image minify
 // //////////////////////////////////////////////////////////
 
 gulp.task('compress-images', function(){
